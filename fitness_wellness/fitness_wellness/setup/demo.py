@@ -38,6 +38,10 @@ def run():
     class1 = _make("Class Type", class_type_name="Crossfit Basics", duration_minutes=60)
     class2 = _make("Class Type", class_type_name="Power Yoga", duration_minutes=45)
 
+    # 6. Diet Plans
+    _make("Diet Plan", member=member1.name, plan_name="Keto Weight Loss", status="Active", start_date=today())
+    _make("Diet Plan", member=member2.name, plan_name="Vegetarian Bulk", status="Active", start_date=today())
+
     frappe.db.commit()
     print("✅ Demo data loaded successfully!")
 
