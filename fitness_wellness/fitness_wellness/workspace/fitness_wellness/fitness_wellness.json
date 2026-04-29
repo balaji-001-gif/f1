@@ -447,7 +447,7 @@
    "dependencies": "",
    "hidden": 0,
    "idx": 38,
-   "is_query_report": 1,
+   "is_query_report": 0,
    "label": "Member Progress Dashboard",
    "link_count": 0,
    "link_to": "Member Progress Dashboard",
@@ -522,7 +522,7 @@
  "public": 1,
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 1.0,
+ "sequence_id": 1,
  "shortcuts": [
   {
    "color": "Blue",
@@ -537,7 +537,7 @@
    "format": "{} Classes",
    "label": "Today's Classes",
    "link_to": "Class Schedule",
-   "stats_filter": "{\"schedule_date\": [\"=\", \"Today\"]}",
+   "stats_filter": "{\"schedule_date\": \"today\"}",
    "type": "DocType"
   },
   {
