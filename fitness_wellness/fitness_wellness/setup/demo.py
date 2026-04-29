@@ -23,8 +23,8 @@ def run():
     plan2 = _make("Membership Plan", plan_name="Premium Yearly", plan_type="Gym", duration_months=12, total_amount=12000)
 
     # 2. Members
-    member1 = _make("Member", first_name="Rahul", last_name="Sharma", email="rahul@example.com", contact_number="9876543210", joining_date=today())
-    member2 = _make("Member", first_name="Anjali", last_name="Verma", email="anjali@example.com", contact_number="9876543211", joining_date=today())
+    member1 = _make("Member", first_name="Rahul", last_name="Sharma", email="rahul@example.com", contact_number="+91-9876543210", joining_date=today())
+    member2 = _make("Member", first_name="Anjali", last_name="Verma", email="anjali@example.com", contact_number="+91-9876543211", joining_date=today())
 
     # 3. Member Subscriptions
     sub1 = _make("Member Subscription", member=member1.name, membership_plan=plan1.name, start_date=today(), status="Active")
