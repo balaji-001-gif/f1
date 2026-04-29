@@ -8,6 +8,21 @@ app_license = "mit"
 # Apps
 required_apps = ["frappe", "erpnext"]
 
+# Module registration
+app_include_js = []
+app_include_css = []
+
+# This registers the module
+modules = {
+    "Fitness Wellness": {
+        "color": "#00BFA5",
+        "icon": "octicon octicon-heart",
+        "type": "module",
+        "label": "Fitness Wellness"
+    }
+}
+
+
 # DocType Class
 # override_doctype_class = {
 # 	"Todo": "custom_app.overrides.CustomTodo"
