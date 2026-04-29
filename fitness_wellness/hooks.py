@@ -8,51 +8,33 @@ app_license = "mit"
 # Apps
 required_apps = ["frappe", "erpnext"]
 
-# Module registration
-app_include_js = []
-app_include_css = []
-
-# This registers the module
-modules = {
-    "Fitness Wellness": {
-        "color": "#00BFA5",
-        "icon": "octicon octicon-heart",
-        "type": "module",
-        "label": "Fitness Wellness"
-    }
-}
-
-
 # DocType Class
 # override_doctype_class = {
-# 	"Todo": "custom_app.overrides.CustomTodo"
+#     "Todo": "custom_app.overrides.CustomTodo"
 # }
 
 # Document Events
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
+#     "*": {
+#         "on_update": "method",
+#         "on_cancel": "method",
+#         "on_trash": "method"
+#     }
 # }
 
 # Fixtures
 fixtures = [
-    {"dt": "Module Def"},
-    {"dt": "Custom Field"},
-    {"dt": "Property Setter"},
-    {"dt": "Workspace"},
-    {"dt": "Workflow"},
-    {"dt": "Workflow State"},
-    {"dt": "Workflow Action Master"},
-    {"dt": "Print Format"},
-    {"dt": "Report"},
-    {"dt": "Client Script"},
-    {"dt": "Server Script"},
-    {"dt": "Notification"},
-    {"dt": "Auto Repeat"},
-    {"dt": "Assignment Rule"}
+    {"dt": "Custom Field", "filters": [["module", "=", "Fitness Wellness"]]},
+    {"dt": "Property Setter", "filters": [["module", "=", "Fitness Wellness"]]},
+    {"dt": "Workspace", "filters": [["name", "=", "Fitness Wellness"]]},
+    {"dt": "Workflow", "filters": [["module", "=", "Fitness Wellness"]]},
+    {"dt": "Workflow State", "filters": [["module", "=", "Fitness Wellness"]]},
+    {"dt": "Workflow Action Master", "filters": [["module", "=", "Fitness Wellness"]]},
+    {"dt": "Print Format", "filters": [["module", "=", "Fitness Wellness"]]},
+    {"dt": "Report", "filters": [["module", "=", "Fitness Wellness"]]},
+    {"dt": "Client Script", "filters": [["module", "=", "Fitness Wellness"]]},
+    {"dt": "Server Script", "filters": [["module", "=", "Fitness Wellness"]]},
+    {"dt": "Notification", "filters": [["module", "=", "Fitness Wellness"]]}
 ]
 
 # Schedulers
