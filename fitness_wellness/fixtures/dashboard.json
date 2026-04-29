@@ -4,6 +4,11 @@
   "name": "Member Progress Dashboard",
   "dashboard_name": "Member Progress Dashboard",
   "module": "Reports Analytics",
-  "charts": []
+  "charts": [
+   {
+    "chart": "Member Progress Chart",
+    "width": "Full"
+   }
+  ]
  }
 ]
