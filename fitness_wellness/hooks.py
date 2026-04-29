@@ -7,15 +7,7 @@ app_license = "mit"
 
 # Apps
 # ------------------
-
 required_apps = ["frappe", "erpnext"]
-
-# Each item in the list will be added as a background job
-# scheduler_events = {
-# 	"daily": [
-# 		"fitness_wellness.utils.schedulers.daily_tasks"
-# 	],
-# }
 
 # DocType Class
 # override_doctype_class = {
@@ -35,7 +27,7 @@ required_apps = ["frappe", "erpnext"]
 fixtures = [
     {"dt": "Custom Field", "filters": [["module", "=", "Fitness Wellness"]]},
     {"dt": "Property Setter", "filters": [["module", "=", "Fitness Wellness"]]},
-    {"dt": "Workspace", "filters": [["module", "=", "Fitness Wellness"]]},
+    {"dt": "Workspace", "filters": [["name", "=", "Fitness Wellness"]]},
     {"dt": "Workflow", "filters": [["module", "=", "Fitness Wellness"]]},
     {"dt": "Workflow State", "filters": [["module", "=", "Fitness Wellness"]]},
     {"dt": "Workflow Action", "filters": [["module", "=", "Fitness Wellness"]]},
