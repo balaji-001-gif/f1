@@ -1,0 +1,170 @@
+{% extends "templates/web.html" %}
+
+{% block header %}
+<style>
+    :root {
+        --bg-primary: #0d1117;
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --accent-color: #00d2ff;
+        --accent-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+        --text-main: #f0f6fc;
+        --text-muted: #8b949e;
+    }
+
+    body {
+        background-color: var(--bg-primary) !important;
+        color: var(--text-main) !important;
+        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .portal-container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .glass-card {
+        background: var(--card-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid var(--glass-border);
+        border-radius: 16px;
+        padding: 25px;
+        margin-bottom: 30px;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .welcome-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+    }
+
+    .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .metric-box {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .metric-value {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--accent-color);
+    }
+
+    .badge-active {
+        background: rgba(46, 160, 67, 0.15);
+        color: #3fb950;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        border: 1px solid rgba(63, 185, 80, 0.3);
+    }
+
+    .table-dark-glass {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 10px;
+    }
+
+    .table-dark-glass th {
+        color: var(--text-muted);
+        font-weight: 500;
+        padding: 10px 15px;
+        text-align: left;
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .table-dark-glass td {
+        background: rgba(255, 255, 255, 0.02);
+        padding: 15px;
+        border-top: 1px solid var(--glass-border);
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .table-dark-glass tr td:first-child {
+        border-left: 1px solid var(--glass-border);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .table-dark-glass tr td:last-child {
+        border-right: 1px solid var(--glass-border);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+</style>
+{% endblock %}
+
+{% block page_content %}
+<div class="portal-container">
+    {% if no_member_record %}
+    <div class="glass-card text-center" style="padding: 60px 20px;">
+        <h2 style="color: #f85149;">No Member Record Found</h2>
+        <p style="color: var(--text-muted); margin-top: 15px;">Please contact administrative services to link email profile <strong>{{ frappe.session.user }}</strong>.</p>
+    </div>
+    {% else %}
+    
+    <div class="glass-card">
+        <h1 class="welcome-title">Hello, {{ member.first_name }}!</h1>
+        <p style="color: var(--text-muted);">Monitor workout stats comprehensively.</p>
+    </div>
+
+    <div class="metric-grid">
+        <!-- Status Box -->
+        <div class="glass-card metric-box">
+            <h4 style="color: var(--text-muted); margin-bottom: 15px;">Account Status</h4>
+            <span class="badge-active">{{ member.status }}</span>
+        </div>
+
+        <!-- Diet Box -->
+        {% if diet_plans %}
+        <div class="glass-card metric-box">
+            <h4 style="color: var(--text-muted); margin-bottom: 15px;">Current Blueprint</h4>
+            <div class="metric-value">{{ diet_plans[0].plan_name }}</div>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Attendance Grid -->
+    <div class="glass-card" style="margin-top: 40px;">
+        <h3 style="margin-bottom: 20px;">Recent Logs</h3>
+        {% if attendance %}
+        <table class="table-dark-glass">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for att in attendance %}
+                <tr>
+                    <td>{{ att.attendance_date }}</td>
+                    <td><span class="badge-active">{{ att.status }}</span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p style="color: var(--text-muted);">No logs currently indexed.</p>
+        {% endif %}
+    </div>
+
+    {% endif %}
+</div>
+{% endblock %}
