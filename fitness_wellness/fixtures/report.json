@@ -1,0 +1,20 @@
+[
+ {
+  "doctype": "Report",
+  "name": "Trainer Performance Report",
+  "report_name": "Trainer Performance Report",
+  "report_type": "Script Report",
+  "module": "Reports Analytics",
+  "ref_doctype": "Trainer Profile",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "name": "Membership Expiry Alert",
+  "report_name": "Membership Expiry Alert",
+  "report_type": "Script Report",
+  "module": "Reports Analytics",
+  "ref_doctype": "Member Subscription",
+  "is_standard": "Yes"
+ }
+]

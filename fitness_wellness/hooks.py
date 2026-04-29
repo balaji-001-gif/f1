@@ -43,6 +43,7 @@ fixtures = [
     {"dt": "Custom Field"},
     {"dt": "Property Setter"},
     {"dt": "Workspace"},
+    {"dt": "Dashboard"},
     {"dt": "Workflow"},
     {"dt": "Workflow State"},
     {"dt": "Workflow Action Master"},
