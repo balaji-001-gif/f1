@@ -39,15 +39,20 @@ modules = {
 
 # Fixtures
 fixtures = [
-    {"dt": "Module Def", "filters": [["app_name", "=", "fitness_wellness"]]},
-    {"dt": "Custom Field", "filters": [["module", "=", "Fitness Wellness"]]},
-    {"dt": "Property Setter", "filters": [["module", "=", "Fitness Wellness"]]},
-    {"dt": "Workspace", "filters": [["name", "=", "Fitness Wellness"]]},
-    {"dt": "Workflow", "filters": [["module", "=", "Fitness Wellness"]]},
-    {"dt": "Workflow State", "filters": [["module", "=", "Fitness Wellness"]]},
-    {"dt": "Workflow Action", "filters": [["module", "=", "Fitness Wellness"]]},
-    {"dt": "Print Format", "filters": [["module", "=", "Fitness Wellness"]]},
-    {"dt": "Notification", "filters": [["module", "=", "Fitness Wellness"]]}
+    {"dt": "Module Def"},
+    {"dt": "Custom Field"},
+    {"dt": "Property Setter"},
+    {"dt": "Workspace"},
+    {"dt": "Workflow"},
+    {"dt": "Workflow State"},
+    {"dt": "Workflow Action Master"},
+    {"dt": "Print Format"},
+    {"dt": "Report"},
+    {"dt": "Client Script"},
+    {"dt": "Server Script"},
+    {"dt": "Notification"},
+    {"dt": "Auto Repeat"},
+    {"dt": "Assignment Rule"}
 ]
 
 # Schedulers
