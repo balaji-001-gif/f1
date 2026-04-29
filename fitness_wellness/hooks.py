@@ -8,20 +8,6 @@ app_license = "mit"
 # Apps
 required_apps = ["frappe", "erpnext"]
 
-# DocType Class
-# override_doctype_class = {
-#     "Todo": "custom_app.overrides.CustomTodo"
-# }
-
-# Document Events
-# doc_events = {
-#     "*": {
-#         "on_update": "method",
-#         "on_cancel": "method",
-#         "on_trash": "method"
-#     }
-# }
-
 # Fixtures
 fixtures = [
     {"dt": "Custom Field", "filters": [["module", "=", "Fitness Wellness"]]},
