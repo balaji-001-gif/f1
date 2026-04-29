@@ -41,4 +41,25 @@ def get_context(context):
         limit=10
     )
 
+    # Fetch Upcoming Classes
+    context.classes = frappe.db.get_all(
+        "Class Enrollment",
+        filters={"member": member.name},
+        fields=["class_schedule", "status"]
+    )
+    # Fetch Assigned Trainers
+    context.trainers = frappe.db.get_all(
+        "Trainer Assignment",
+        filters={"member": member.name},
+        fields=["trainer", "role"]
+    )
+    # Fetch Body Metrics
+    context.metrics = frappe.db.get_all(
+        "Body Metric Log",
+        filters={"member": member.name},
+        fields=["date", "weight", "body_fat_percentage"],
+        order_by="date desc",
+        limit=5
+    )
+
     return context
