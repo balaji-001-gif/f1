@@ -23,6 +23,11 @@ fixtures = [
     {"dt": "Notification", "filters": [["module", "=", "Fitness Wellness"]]}
 ]
 
+standard_portal_menu_items = [
+    {"title": "Fitness Dashboard", "route": "/fitness_portal/dashboard", "role": "All"}
+]
+
+
 # Schedulers
 scheduler_events = {
     "daily": [
