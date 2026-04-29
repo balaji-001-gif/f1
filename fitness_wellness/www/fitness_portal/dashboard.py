@@ -57,7 +57,7 @@ def get_context(context):
     context.metrics = frappe.db.get_all(
         "Body Metric Log",
         filters={"member": member.name},
-        fields=["date", "weight", "body_fat_percentage"],
+        fields=["date", "weight", "body_fat"],
         order_by="date desc",
         limit=5
     )
