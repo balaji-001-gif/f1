@@ -51,7 +51,7 @@ def get_context(context):
     context.trainers = frappe.db.get_all(
         "Trainer Assignment",
         filters={"member": member.name},
-        fields=["trainer", "role"]
+        fields=["trainer"]
     )
     # Fetch Body Metrics
     context.metrics = frappe.db.get_all(
