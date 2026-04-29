@@ -19,38 +19,24 @@ def run():
     print("🚀 Fitness Wellness: Loading demo data...")
 
     # 1. Membership Plans
-    plan1 = _make("Membership Plan", plan_name="Standard Monthly", monthly_rate=1500, benefits="Gym Access")
-    plan2 = _make("Membership Plan", plan_name="Premium Yearly", monthly_rate=12000, benefits="Gym + Pool + Spa Access")
+    plan1 = _make("Membership Plan", plan_name="Standard Monthly", plan_type="Gym", duration_months=1, total_amount=1500)
+    plan2 = _make("Membership Plan", plan_name="Premium Yearly", plan_type="Gym", duration_months=12, total_amount=12000)
 
     # 2. Members
-    member1 = _make("Member", first_name="Rahul", last_name="Sharma", email="rahul@example.com", phone="9876543210", join_date=today())
-    member2 = _make("Member", first_name="Anjali", last_name="Verma", email="anjali@example.com", phone="9876543211", join_date=today())
+    member1 = _make("Member", first_name="Rahul", last_name="Sharma", email="rahul@example.com", contact_number="9876543210", joining_date=today())
+    member2 = _make("Member", first_name="Anjali", last_name="Verma", email="anjali@example.com", contact_number="9876543211", joining_date=today())
 
     # 3. Member Subscriptions
-    sub1 = _make("Member Subscription", member=member1.name, plan=plan1.name, start_date=today(), end_date=add_months(today(), 1), status="Active")
-    sub2 = _make("Member Subscription", member=member2.name, plan=plan2.name, start_date=today(), end_date=add_months(today(), 12), status="Active")
+    sub1 = _make("Member Subscription", member=member1.name, membership_plan=plan1.name, start_date=today(), status="Active")
+    sub2 = _make("Member Subscription", member=member2.name, membership_plan=plan2.name, start_date=today(), status="Active")
 
     # 4. Trainer Profiles
-    trainer1 = _make("Trainer Profile", trainer_name="Vikram Singh", email="vikram@example.com", specialization="Strength & Conditioning", status="Active")
-    trainer2 = _make("Trainer Profile", trainer_name="Sneha Kapoor", email="sneha@example.com", specialization="Yoga & Flexibility", status="Active")
+    trainer1 = _make("Trainer Profile", trainer_name="Vikram Singh", email="vikram@example.com", status="Active")
+    trainer2 = _make("Trainer Profile", trainer_name="Sneha Kapoor", email="sneha@example.com", status="Active")
 
     # 5. Class Types
-    class1 = _make("Class Type", class_name="Crossfit Basics", description="High intensity cross training")
-    class2 = _make("Class Type", class_name="Power Yoga", description="Vinyasa based power yoga")
-
-    # 6. Class Schedules
-    _make("Class Schedule", class_type=class1.name, trainer=trainer1.name, schedule_date=add_days(today(), 1), start_time="07:00:00", end_time="08:00:00")
-    _make("Class Schedule", class_type=class2.name, trainer=trainer2.name, schedule_date=add_days(today(), 1), start_time="18:00:00", end_time="19:00:00")
-
-    # 7. Equipment Register
-    _make("Equipment Register", equipment_name="Treadmill T100", equipment_type="Cardio", status="Operational")
-    _make("Equipment Register", equipment_name="Bench Press Rack", equipment_type="Weights", status="Operational")
-
-    # 8. Diet Plans
-    _make("Diet Plan", plan_name="Keto Weight Loss", member=member1.name, status="Active")
-
-    # 9. Membership Invoices
-    _make("Membership Invoice", member=member1.name, plan=plan1.name, amount=1500, due_date=today(), status="Paid")
+    class1 = _make("Class Type", class_type_name="Crossfit Basics", duration_minutes=60)
+    class2 = _make("Class Type", class_type_name="Power Yoga", duration_minutes=45)
 
     frappe.db.commit()
     print("✅ Demo data loaded successfully!")
