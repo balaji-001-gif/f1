@@ -1,0 +1,56 @@
+[
+ {
+  "doctype": "Module Def",
+  "name": "Member Management",
+  "module_name": "Member Management",
+  "app_name": "fitness_wellness"
+ },
+ {
+  "doctype": "Module Def",
+  "name": "Class Management",
+  "module_name": "Class Management",
+  "app_name": "fitness_wellness"
+ },
+ {
+  "doctype": "Module Def",
+  "name": "Trainer Management",
+  "module_name": "Trainer Management",
+  "app_name": "fitness_wellness"
+ },
+ {
+  "doctype": "Module Def",
+  "name": "Facility Management",
+  "module_name": "Facility Management",
+  "app_name": "fitness_wellness"
+ },
+ {
+  "doctype": "Module Def",
+  "name": "Health Assessment",
+  "module_name": "Health Assessment",
+  "app_name": "fitness_wellness"
+ },
+ {
+  "doctype": "Module Def",
+  "name": "Nutrition",
+  "module_name": "Nutrition",
+  "app_name": "fitness_wellness"
+ },
+ {
+  "doctype": "Module Def",
+  "name": "Billing",
+  "module_name": "Billing",
+  "app_name": "fitness_wellness"
+ },
+ {
+  "doctype": "Module Def",
+  "name": "Reports Analytics",
+  "module_name": "Reports Analytics",
+  "app_name": "fitness_wellness"
+ },
+ {
+  "doctype": "Module Def",
+  "name": "Fitness Wellness",
+  "module_name": "Fitness Wellness",
+  "app_name": "fitness_wellness"
+ }
+]

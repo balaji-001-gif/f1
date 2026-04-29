@@ -24,6 +24,7 @@ required_apps = ["frappe", "erpnext"]
 
 # Fixtures
 fixtures = [
+    {"dt": "Module Def", "filters": [["app_name", "=", "fitness_wellness"]]},
     {"dt": "Custom Field", "filters": [["module", "=", "Fitness Wellness"]]},
     {"dt": "Property Setter", "filters": [["module", "=", "Fitness Wellness"]]},
     {"dt": "Workspace", "filters": [["name", "=", "Fitness Wellness"]]},
