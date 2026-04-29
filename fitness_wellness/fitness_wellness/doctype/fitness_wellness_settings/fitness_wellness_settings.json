@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-29 11:45:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_settings_tab",
+  "enable_referral_program",
+  "default_membership_plan",
+  "billing_settings_tab",
+  "currency",
+  "tax_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "General Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_referral_program",
+   "fieldtype": "Check",
+   "label": "Enable Referral Program"
+  },
+  {
+   "fieldname": "default_membership_plan",
+   "fieldtype": "Link",
+   "label": "Default Membership Plan",
+   "options": "Membership Plan"
+  },
+  {
+   "fieldname": "billing_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Billing Settings"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "tax_account",
+   "fieldtype": "Link",
+   "label": "Tax Account",
+   "options": "Account"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-04-29 11:45:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fitness Wellness",
+ "name": "Fitness Wellness Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
