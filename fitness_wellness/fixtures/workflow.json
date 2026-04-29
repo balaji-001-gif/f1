@@ -1,6 +1,7 @@
 [
  {
   "doctype": "Workflow",
+  "name": "Member Subscription Approval",
   "workflow_name": "Member Subscription Approval",
   "document_type": "Member Subscription",
   "is_active": 1,
