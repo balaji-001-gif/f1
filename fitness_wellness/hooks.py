@@ -6,7 +6,6 @@ app_email = "antigravity@google.com"
 app_license = "mit"
 
 # Apps
-# ------------------
 required_apps = ["frappe", "erpnext"]
 
 # DocType Class
