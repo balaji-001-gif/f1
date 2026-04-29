@@ -20,6 +20,7 @@ fixtures = [
     {"dt": "Report", "filters": [["module", "=", "Fitness Wellness"]]},
     {"dt": "Client Script", "filters": [["module", "=", "Fitness Wellness"]]},
     {"dt": "Server Script", "filters": [["module", "=", "Fitness Wellness"]]},
+    {"dt": "Role"},
     {"dt": "Notification", "filters": [["module", "=", "Fitness Wellness"]]}
 ]
 

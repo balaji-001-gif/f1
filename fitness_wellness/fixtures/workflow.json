@@ -1,33 +1,47 @@
 [
  {
   "doctype": "Workflow",
-  "document_type": "Member",
+  "workflow_name": "Member Subscription Approval",
+  "document_type": "Member Subscription",
   "is_active": 1,
-  "name": "Member Onboarding Workflow",
-  "workflow_name": "Member Onboarding Workflow",
   "override_status": 1,
+  "workflow_state_field": "status",
   "states": [
    {
-    "allow_edit": "System Manager",
-    "state": "Pending Verification",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "Fitness Manager",
     "update_field": "status",
-    "update_value": "Inactive"
+    "update_value": "Draft"
    },
    {
-    "allow_edit": "System Manager",
+    "state": "Pending Approval",
+    "doc_status": "0",
+    "allow_edit": "Fitness Manager",
+    "update_field": "status",
+    "update_value": "Pending Approval"
+   },
+   {
     "state": "Active",
+    "doc_status": "1",
+    "allow_edit": "Fitness Manager",
     "update_field": "status",
     "update_value": "Active"
    }
   ],
   "transitions": [
    {
-    "action": "Verify",
-    "allowed": "System Manager",
+    "state": "Draft",
+    "action": "Submit for Approval",
+    "next_state": "Pending Approval",
+    "allowed": "Fitness Manager"
+   },
+   {
+    "state": "Pending Approval",
+    "action": "Approve",
     "next_state": "Active",
-    "state": "Pending Verification"
+    "allowed": "Fitness Manager"
    }
-  ],
-  "workflow_state_field": "workflow_state"
+  ]
  }
 ]
