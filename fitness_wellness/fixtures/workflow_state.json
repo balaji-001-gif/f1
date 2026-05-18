@@ -12,5 +12,19 @@
   "workflow_state_name": "Active",
   "icon": "check",
   "style": "Success"
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Draft",
+  "workflow_state_name": "Draft",
+  "icon": "file",
+  "style": "Primary"
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Pending Approval",
+  "workflow_state_name": "Pending Approval",
+  "icon": "review",
+  "style": "Warning"
  }
 ]

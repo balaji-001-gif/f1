@@ -3,5 +3,15 @@
   "doctype": "Workflow Action Master",
   "name": "Verify",
   "workflow_action_name": "Verify"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "name": "Submit for Approval",
+  "workflow_action_name": "Submit for Approval"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "name": "Approve",
+  "workflow_action_name": "Approve"
  }
 ]
